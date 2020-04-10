@@ -38,11 +38,11 @@ char *Person::getSurname(char *surname) const
     strcpy(surname, this->surname);
     return surname;
 }
-int Person::getYear()
+int Person::getYear() const
 {
     return year;
 }
-void Person::print()
+void Person::print() const
 {
     cout << "Name: " << name << endl;
     cout << "Surname: " << surname << endl;
