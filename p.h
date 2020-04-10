@@ -24,12 +24,12 @@ public:
     void print();
     ~Person();
 
-    friend bool operator ==(const Person& left,const Person& right);
-    friend bool operator !=(const Person& left,const Person& right);
-    friend bool operator >(const Person& left,const Person& right);
-    friend bool operator <(const Person& left,const Person& right);
-    friend bool operator >=(const Person& left,const Person& right);
-    friend bool operator <=(const Person& left,const Person& right);
+    bool operator ==(const Person& right);
+    bool operator !=(const Person& right);
+    bool operator >(const Person& right);
+    bool operator <(const Person& right);
+    bool operator >=(const Person& right);
+    bool operator <=(const Person& right);
     friend ostream& operator << (ostream &out, const Person &pers);
     friend istream& operator >> (istream &in, Person &pers);
     Person& operator = (const Person &pers);
