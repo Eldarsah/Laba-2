@@ -19,9 +19,9 @@ public:
     void setYear(int);
     char *getName(char *name) const;
     char *getSurname(char *surname) const;
-    int getYear();
+    int getYear() const;
 
-    void print();
+    void print() const;
     ~Person();
 
     bool operator ==(const Person& right)const;
