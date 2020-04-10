@@ -53,27 +53,27 @@ Person::~Person()
     delete [] name;
     delete [] surname;
 }
-bool Person::operator ==(const Person &right)
+bool Person::operator ==(const Person &right)const
 {
     return (strcmp(this->name,right.name)==0 && strcmp(this->surname,right.surname)==0 && (this->year==right.year));
 }
-bool Person::operator !=(const Person& right)
+bool Person::operator !=(const Person& right)const
 {
     return !(strcmp(this->name,right.name)==0 && strcmp(this->surname,right.surname)==0 && (this->year==right.year));
 }
-bool Person::operator >(const Person& right)
+bool Person::operator >(const Person& right)const
 {
     return (this->year>right.year);
 }
-bool Person::operator <(const Person& right)
+bool Person::operator <(const Person& right)const
 {
     return (this->year<right.year);
 }
-bool Person::operator >=(const Person& right)
+bool Person::operator >=(const Person& right)const
 {
     return (this->year>=right.year);
 }
-bool Person::operator <=(const Person& right)
+bool Person::operator <=(const Person& right)const
 {
     return (this->year<=right.year);
 }
@@ -104,5 +104,6 @@ Person& Person::operator = (const Person &pers)
 
     year = pers.year;
 
+    cout << "Сработал перегруженный оператор = " << endl;
     return *this;
 }
