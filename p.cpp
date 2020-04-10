@@ -53,29 +53,29 @@ Person::~Person()
     delete [] name;
     delete [] surname;
 }
-bool operator ==(const Person &left,const Person &right)
+bool Person::operator ==(const Person &right)
 {
-    return (strcmp(left.name,right.name)==0 && strcmp(left.surname,right.surname)==0 && (left.year==right.year));
+    return (strcmp(this->name,right.name)==0 && strcmp(this->surname,right.surname)==0 && (this->year==right.year));
 }
-bool operator !=(const Person& left,const Person& right)
+bool Person::operator !=(const Person& right)
 {
-    return !(strcmp(left.name,right.name)==0 && strcmp(left.surname,right.surname)==0 && (left.year==right.year));
+    return !(strcmp(this->name,right.name)==0 && strcmp(this->surname,right.surname)==0 && (this->year==right.year));
 }
-bool operator >(const Person& left,const Person& right)
+bool Person::operator >(const Person& right)
 {
-    return (left.year>right.year);
+    return (this->year>right.year);
 }
-bool operator <(const Person& left,const Person& right)
+bool Person::operator <(const Person& right)
 {
-    return (left.year<right.year);
+    return (this->year<right.year);
 }
-bool operator >=(const Person& left,const Person& right)
+bool Person::operator >=(const Person& right)
 {
-    return (left.year>=right.year);
+    return (this->year>=right.year);
 }
-bool operator <=(const Person& left,const Person& right)
+bool Person::operator <=(const Person& right)
 {
-    return (left.year<=right.year);
+    return (this->year<=right.year);
 }
 
 ostream& operator << (ostream &out, const Person &pers)
